@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In & Sign up form</title>
+    <title>Sign In & Sign Up form</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2957518ca6.js" crossorigin="anonymous"></script>
 </head>
@@ -12,58 +12,62 @@
 <body>
     <div class="container">
         <div class="form-box">
-            <h1 id="title">Sign Up</h1>
             <form>
                 <div class="input-group">
-
-                    <div class="input-field" id="namefield">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="name">
+                    <div class="input-fl">
+                        <p>Email</p>
+                        <div class="input-field" id="emailField">
+                            <i class="fa-solid fa-envelope" id="emailIcon"></i>
+                            <input type="email" placeholder="Email">
+                        </div>
                     </div>
 
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="email">
+                    <div class="input-fl">
+                        <p>Password</p>
+                        <div class="input-field" id="passwordField">
+                            <i class="fa-solid fa-lock" id="passwordIcon"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
                     </div>
 
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="password">
+                    <div class="input-fl" id="additionalFields" style="display:none;">
+                        <p>Name</p>
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Name">
+                        </div>
                     </div>
-                    <p>forgot password <a href="#">Click Here</a></p>
+
+                    <div class="input-fl" id="additionalFields" style="display:none;">
+                        <p>Phone No.</p>
+                        <div class="input-field">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="text" placeholder="Phone No">
+                        </div>
+                    </div>
+
+                    <div class="input-fl" id="additionalFields" style="display:none;">
+                        <p>Confirm Password</p>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Confirm Password">
+                        </div>
+                    </div>
+
+                    <p class="forget">Forgot password <a href="#">Click Here</a></p>
 
                 </div>
-
                 <div class="btn-field">
-                    <button type="button" id="signupbtn">Sign Up</button>
-                    <button type="button" id="signinbtn" class="disable">Sign In</button>
+                    <button type="button" id="signupbtn" class="disable">Register</button>
+                    <button type="button" id="signinbtn" class="disable">Login</button>
                 </div>
+
             </form>
         </div>
     </div>
 
-    <script>
-        let signupbtn = document.getElementById("signupbtn")
-        let signinbtn = document.getElementById("signinbtn")
-        let namefield = document.getElementById("namefield")
-        let title = document.getElementById("title")
+    <script src="script.js"></script>
 
-        signinbtn.onclick = function () {
-            namefield.style.maxHeight = "0";
-            title.innerHTML = "Sign In";
-            signupbtn.classList.add("disable")
-            signinbtn.classList.remove("disable")
-        }
-
-
-        signupbtn.onclick = function () {
-            namefield.style.maxHeight = "60px";
-            title.innerHTML = "Sign Up";
-            signupbtn.classList.remove("disable")
-            signinbtn.classList.add("disable")
-        }
-    </script>
 
 </body>
 

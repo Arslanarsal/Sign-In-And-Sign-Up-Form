@@ -9,22 +9,32 @@
 .container {
     height: 100vh;
     width: 100%;
-    background-image: url(Image.jpg);
+    /* background-image: url(Image.jpg); */
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
+.navbar{
+    background-color: green;
+    color: white;
+    width: 100%;
+    height: 7vh;
+    padding-top: 8px;
+    padding-left: 8px;
+}
+
+
 .form-box {
     width: 90%;
-    max-width: 450px;
+    max-width: 550px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
     background: #fff;
-    padding: 50px;
+    padding: 18px;
     text-align: center;
 }
 
@@ -49,15 +59,17 @@
 }
 
 .input-field {
-    background: #eaeaea;
-    margin: 15px 0;
-    border-radius: 24px;
+    border: solid 1px black;
+    margin: 6px 0 ;
+    border-radius:7px;
     display: flex;
     align-items: center;
-
+    width: 82%;
     max-height: 65px;
     transition: max-height 0.5s;
     overflow: hidden;
+    position: relative;
+    right: 0px;
 }
 
 input {
@@ -91,8 +103,8 @@ form p a {
 
 .btn-field button {
     flex-basis: 48%;
-    background: #3c00a0;
-    color: #fff;
+    /* background: green; */
+    /* color: #fff; */
     height: 40px;
     border-radius: 20px;
     border: 0;
@@ -100,13 +112,34 @@ form p a {
     cursor: pointer;
     transition: 1s;
 }
+.input-fl{
+    display: flex;
+    align-items: center;
+}
+.input-fl p{
+    margin-right: 12px;
+    width: 150px;
+}
 
+.forget{
+    margin-top: 30px;
+}
+
+.input-field i {
+    display: none;
+}
 
 .input-group {
-    height: 280px;
+    height: 400px;
 }
 
 .btn-field button.disable {
     background: #eaeaea;
     color: #555;
+}
+
+
+.btn-field button.active {
+    background: green;
+    color: #fff;
 }
